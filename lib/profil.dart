@@ -8,7 +8,7 @@ class Sat extends StatefulWidget {
   @override
   State<Sat> createState() => _SatState();
 }
-//default 
+//defaultnya terang
 class _SatState extends State<Sat> {
   bool gelap = false;
 //buat ganti tema

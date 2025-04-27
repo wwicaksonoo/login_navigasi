@@ -6,10 +6,10 @@ class Login extends StatefulWidget {
   const Login({super.key});
 
   @override
-  State<Login> createState() => _LoginState();
+  State<Login> createState() => L();
 }
 
-class _LoginState extends State<Login> {
+class L extends State<Login> {
 
   //ini yang bikin pass ilang
   bool passilang = true;
@@ -18,8 +18,9 @@ class _LoginState extends State<Login> {
   final TextEditingController user = TextEditingController();
   final TextEditingController pass = TextEditingController();
 
-  //buat tombol login
-  void _login() {
+  //buat tombol login ngarah ke itu, halaman profil
+  //bisa ditambahin validator buat login?? cuma gatau belom belajar
+  void pencetan() {
 
     Navigator.push(
       context,
@@ -86,7 +87,7 @@ class _LoginState extends State<Login> {
           const SizedBox(height: 30),
 
           ElevatedButton(
-            onPressed: _login, 
+            onPressed: pencetan, 
             child: const Padding(padding: EdgeInsets.symmetric(horizontal: 32, vertical: 12),
             child: Text('login'),
             ),
