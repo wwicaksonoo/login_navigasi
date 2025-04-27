@@ -14,7 +14,7 @@ class Tombol extends StatelessWidget {
         backgroundColor: isDark ? Colors.white : Colors.black,
         foregroundColor: isDark ? Colors.black : Colors.white,
       ),
-      child: Text(isDark ? 'Switch to Light Theme' : 'Switch to Dark Theme'),
+      child: Text(isDark ? 'mode terang' : 'mode gelap'),
     );
   }
 }

@@ -8,22 +8,22 @@ class Sat extends StatefulWidget {
   @override
   State<Sat> createState() => _SatState();
 }
-
+//default 
 class _SatState extends State<Sat> {
-  bool _isDarkTheme = false;
-
+  bool gelap = false;
+//buat ganti tema
   void toggleTheme() {
     setState(() {
-      _isDarkTheme = !_isDarkTheme;
+      gelap = !gelap;
     });
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: _isDarkTheme ? Colors.black : Colors.white,
+      backgroundColor: gelap ? Colors.black : Colors.white,
       appBar: AppBar(
-        backgroundColor: _isDarkTheme ? Colors.grey[900] : Colors.blue,
+        backgroundColor: gelap ? Colors.grey[900] : Colors.blue,
         title: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: const [
@@ -40,7 +40,8 @@ class _SatState extends State<Sat> {
             Nama(),
             follower(),
             action(),
-            Tombol(onPressed: toggleTheme, isDark: _isDarkTheme),
+            const SizedBox(height: 20),
+            Tombol(onPressed: toggleTheme, isDark: gelap),
           ],
         ),
       ),

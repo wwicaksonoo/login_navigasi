@@ -11,14 +11,16 @@ class Login extends StatefulWidget {
 
 class _LoginState extends State<Login> {
 
-  // class _LoginPageState extends State<LoginPage> {
-  bool _obscurePassword = true;
+  //ini yang bikin pass ilang
+  bool passilang = true;
 
-  final TextEditingController _usernameController = TextEditingController();
-  final TextEditingController _passwordController = TextEditingController();
+  //baca inputan
+  final TextEditingController user = TextEditingController();
+  final TextEditingController pass = TextEditingController();
 
+  //buat tombol login
   void _login() {
-    // Di sini kamu bisa tambahkan validasi kalau perlu
+
     Navigator.push(
       context,
       MaterialPageRoute(builder: (context) => const Sat()),
@@ -45,14 +47,12 @@ class _LoginState extends State<Login> {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           TextField(
-            controller: _usernameController,
+            controller: user,
             decoration: InputDecoration(
               labelText: 'username',
               hintText: 'masukkan username',
               prefixIcon: const Icon(Icons.person),
-              border: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(15),
-              )
+             
             ),
           ),
 
@@ -61,21 +61,21 @@ class _LoginState extends State<Login> {
 
 
           TextField(
-            controller: _passwordController,
-            obscureText: _obscurePassword,
+            controller: pass,
+            obscureText: passilang,
             decoration: InputDecoration(
               labelText: 'password',
               hintText: 'masukkan password',
               prefixIcon: const Icon(Icons.lock),
               suffixIcon: IconButton(
                 icon: Icon(
-                  _obscurePassword ? Icons.visibility_off : Icons.visibility,
+                  passilang ? Icons.visibility_off : Icons.visibility,
               
               ),
 
               onPressed: () {
                 setState(() {
-                  _obscurePassword = !_obscurePassword;
+                  passilang = !passilang;
                 });
               },
 
