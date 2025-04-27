@@ -1,20 +1,20 @@
 import 'package:flutter/material.dart';
-
+//ganti ganti mode
 class Tombol extends StatelessWidget {
   final VoidCallback onPressed;
-  final bool isDark;
+  final bool ganti;
 
-  const Tombol({super.key, required this.onPressed, required this.isDark});
+  const Tombol({super.key, required this.onPressed, required this.ganti});
 
   @override
   Widget build(BuildContext context) {
     return ElevatedButton(
       onPressed: onPressed,
       style: ElevatedButton.styleFrom(
-        backgroundColor: isDark ? Colors.white : Colors.black,
-        foregroundColor: isDark ? Colors.black : Colors.white,
+        backgroundColor: ganti ? Colors.white : Colors.black,
+        foregroundColor: ganti ? Colors.black : Colors.white,
       ),
-      child: Text(isDark ? 'mode terang' : 'mode gelap'),
+      child: Text(ganti ? 'mode terang' : 'mode gelap'),
     );
   }
 }

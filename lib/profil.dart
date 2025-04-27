@@ -41,7 +41,7 @@ class _SatState extends State<Sat> {
             follower(),
             action(),
             const SizedBox(height: 20),
-            Tombol(onPressed: toggleTheme, isDark: gelap),
+            Tombol(onPressed: toggleTheme, ganti: gelap),
           ],
         ),
       ),
